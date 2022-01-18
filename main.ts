@@ -1,0 +1,22 @@
+input.onButtonPressed(Button.A, function () {
+    pins.servoWritePin(AnalogPin.P0, 25)
+    basic.pause(100)
+    RingbitCar.freestyle(1, 1)
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 2)
+    basic.pause(100)
+    pins.servoWritePin(AnalogPin.P0, 90)
+    basic.pause(100)
+    RingbitCar.running_time(RingbitCar.Direction_run.backward, 2)
+    basic.pause(100)
+    RingbitCar.steering_angle(RingbitCar.Direction_turn.right, 90)
+    basic.pause(100)
+    pins.servoWritePin(AnalogPin.P0, 30)
+    basic.pause(100)
+    RingbitCar.running_time(RingbitCar.Direction_run.forward, 5)
+    basic.pause(100)
+    pins.servoWritePin(AnalogPin.P0, 90)
+})
+pins.servoWritePin(AnalogPin.P0, 90)
+basic.forever(function () {
+	
+})
